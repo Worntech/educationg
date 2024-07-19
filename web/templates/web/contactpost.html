@@ -1,0 +1,177 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html><html class="no-js" lang="zxx"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/LineIcons.2.0.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/tiny-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/main.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+
+    <!-- End Header Area -->
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Contact Us</h1>
+                        <p>If you have something to share with us, or you want know something from us, please contact us in the information bellow.</p>
+                    </div>
+                    <ul class="breadcrumb-nav">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Start Contact Area -->
+    <section id="contact-us" class="contact-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-12">
+                    <div class="form-main">
+                        <h3 class="title"><span>Ready to Start?</span>
+                            Let's Talk
+                        </h3>
+                        {% comment %} {% for m in messages %}
+                        <p style="color:rgb(10, 159, 79)">{{m}}</p>
+                        {% endfor %}
+                        <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{contactpost.as_p}}
+                        
+                        <button class="buttons"><b>Submit Message<b></button>
+                        </form> {% endcomment %}
+                        <form class="form" method="POST" action="{% url 'contactpost' %}">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Name</label>
+                                        <input name="name" type="text" placeholder="" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Subject</label>
+                                        <input name="subject" type="text" placeholder="" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Email Address</label>
+                                        <input name="email" type="email" placeholder="" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Phone Number</label>
+                                        <input name="phone" type="text" placeholder="" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group message">
+                                        <label>Your Message</label>
+                                        <textarea name="message" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group button">
+                                        <button class="btn ">Submit Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="contact-info">
+                        <!-- Start Single Info -->
+                        <div class="single-info">
+                            <i class="lni lni-map-marker"></i>
+                            <h4>Visit Our Office</h4>
+                            <p class="no-margin-bottom">202 Mainstreet, 12th Floor
+                                <br> Dodoma, Tanzania.</p>
+                        </div>
+                        <!-- End Single Info -->
+                        <!-- Start Single Info -->
+                        <div class="single-info">
+                            <i class="lni lni-phone"></i>
+                            <h4>Let's Talk</h4>
+                            <p class="no-margin-bottom">Phone: (+255) 624 089 128
+                                <br> Fax: +255 744 200 608</p>
+                        </div>
+                        <!-- End Single Info -->
+                        <!-- Start Single Info -->
+                        <div class="single-info">
+                            <i class="lni lni-envelope"></i>
+                            <h4>E-mail Us</h4>
+                            <p class="no-margin-bottom"><a href="mailto:worntechinfo@gmail.com">worntechinfo@gmail.com</a>
+                                <br> <a href="mailto:info@worntech.com">info@worntech.com</a></p>
+                        </div>
+                        <!-- End Single Info -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Contact Area -->
+
+    <!-- Start Google-map Area -->
+    <div class="map-section">
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126933.95399757384!2d35.69074773534084!3d-6.172770588795333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184de55feeaa7ec9%3A0x8040bf1262e19cee!2sDodoma!5e0!3m2!1sen!2stz!4v1699380876160!5m2!1sen!2stz" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- End Google-map Area -->
+
+    <!-- Start Footer Area -->
+
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'web/js/count-up.min.js' %}"></script>
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <script src="{% static 'web/js/tiny-slider.js' %}"></script>
+    <script src="{% static 'web/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+
+</body></html>
+
+{% endblock %}

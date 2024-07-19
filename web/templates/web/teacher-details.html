@@ -1,0 +1,204 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html><html class="no-js" lang="zxx"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/LineIcons.2.0.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/tiny-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/main.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+
+    <!-- End Header Area -->
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Teacher Details</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text</p>
+                    </div>
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Teacher Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Teacher Details -->
+    <div class="teacher-details-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <div class="teacher-personal-info">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <div class="image">
+                                    <img src="{% static 'web/images/teacher-details.jpg' %}" alt="#">
+                                    <h4 class="name">Annie Johnson
+                                        <span>Graphics Design</span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-12">
+                                <div class="personal-social">
+                                    <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt, consectetur adipiscing elit.
+                                    </p>
+                                    <ul class="social">
+                                        <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-details-item">
+                        <div class="teacher-details-right">
+                            <div class="skill-main right-contact-inner">
+                                <h3>Teacher's skill</h3>
+                                <!-- Single Skill -->
+                                <div class="single-skill">
+                                    <div class="skill-title">
+                                        <h4>English</h4>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                            <span>90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Skill -->
+                                <!-- Single Skill -->
+                                <div class="single-skill">
+                                    <div class="skill-title">
+                                        <h4>Computer</h4>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                                            <span>85%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Skill -->
+                                <!-- Single Skill -->
+                                <div class="single-skill">
+                                    <div class="skill-title">
+                                        <h4>Art</h4>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                            <span>80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Skill -->
+                                <!-- Single Skill -->
+                                <div class="single-skill">
+                                    <div class="skill-title">
+                                        <h4>Science</h4>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%;">
+                                            <span>92%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Skill -->
+                            </div>
+                            <div class="teacher-contact-form">
+                                <h3>Send your message</h3>
+                                <form class="form" method="post" action="assets/mail/mail.php">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="name" type="text" placeholder="Your Name" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="subject" type="text" placeholder="Your Subject" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="email" type="email" placeholder="Your Email" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="phone" type="text" placeholder="Your Phone" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group message">
+                                                <textarea name="message" placeholder="Your Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group button">
+                                                <button type="submit" class="btn ">Submit Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End teacher Details -->
+
+    <!-- Start Footer Area -->
+
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'web/js/count-up.min.js' %}"></script>
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <script src="{% static 'web/js/tiny-slider.js' %}"></script>
+    <script src="{% static 'web/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+
+</body></html>
+
+{% endblock %}
